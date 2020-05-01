@@ -30,13 +30,8 @@ public class Trace extends Activity implements OnMapReadyCallback {
     MapView mapView;
     GoogleMap map;
 
-    private CameraPosition mCameraPosition;
-
-    private LocationManager locationManager;
-    private Location mLastKnownLocation;
     private static final int PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION = 1;
     private boolean mLocationPermissionGranted;
-    private GoogleApiClient mGoogleApiClient;
 
 
     @Override
