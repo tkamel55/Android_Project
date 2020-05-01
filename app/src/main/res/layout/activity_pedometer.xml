@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pedometer">
+
+    <RelativeLayout
+        android:id="@+id/rlLable"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="STEP COUNTER"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStopCounter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/ic_login_button_bg_selector"
+        android:text="Stop Counter"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        style="@style/Basic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnStopCounter"
+        android:layout_below="@id/rlLable"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_step"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".40"
+            app:cardCornerRadius="@dimen/spacing_tiny"
+            app:cardElevation="@dimen/spacing_tiny">
+
+            <LinearLayout
+                android:id="@+id/box_steps"
+                style="@style/EntryBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/step_title"
+                    style="@style/EntryTitleMajor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/steps_today" />
+
+                <TextView
+                    android:id="@+id/step_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="70sp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/row_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".30"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_calories"
+                android:layout_width="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/spacing_tiny"
+                app:cardElevation="@dimen/spacing_tiny">
+
+                <LinearLayout
+                    android:id="@+id/box_calories"
+                    style="@style/EntryBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calories_title"
+                        style="@style/EntryTitleMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calories_burned" />
+
+                    <TextView
+                        android:id="@+id/calories_value"
+                        style="@style/EntryValueMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/step_unit"
+                        style="@style/UnitBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/calories_unit" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_distance"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/spacing_tiny"
+                app:cardElevation="@dimen/spacing_tiny">
+
+                <LinearLayout
+                    android:id="@+id/box_distance"
+                    style="@style/EntryBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/distance_title"
+                        style="@style/EntryTitleMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distance" />
+
+                    <TextView
+                        android:id="@+id/distance_value"
+                        style="@style/EntryValueMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/distance_unit"
+                        style="@style/UnitBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distance_unit_metric" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".30"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_speed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="10dp"
+
+                app:cardCornerRadius="@dimen/spacing_tiny"
+                app:cardElevation="@dimen/spacing_tiny">
+
+                <LinearLayout
+                    android:id="@+id/box_speed"
+                    style="@style/EntryBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/speed_title"
+                        style="@style/EntryTitleMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/speed_title" />
+
+                    <TextView
+                        android:id="@+id/speed_value"
+                        style="@style/EntryValueMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/speed_unit"
+                        style="@style/UnitBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/speed_unit_metric" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_pace"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="@dimen/spacing_tiny"
+                app:cardElevation="@dimen/spacing_tiny">
+
+                <LinearLayout
+                    android:id="@+id/box_pace"
+                    style="@style/EntryBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/pace_title"
+                        style="@style/EntryTitleMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pace_title" />
+
+                    <TextView
+                        android:id="@+id/pace_value"
+                        style="@style/EntryValueMinor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0" />
+
+                    <TextView
+                        android:id="@+id/pace_unit"
+                        style="@style/UnitBasic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pace_unit" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

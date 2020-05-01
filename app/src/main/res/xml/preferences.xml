@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="should_run_in_background"
+        android:title="@string/pref_title_should_run_in_background"
+        android:summary="@string/pref_summary_should_run_in_background"
+        android:defaultValue="true"/>
+
+    <com.example.android_project.SliderPreference
+        android:key="sensitivity"
+        android:title="@string/pref_title_sensitivity"
+        android:summary="@array/pref_summary_sensitivity"
+        android:defaultValue="@string/pref_default_sensitivity" />
+
+    <EditTextPreference
+        android:key="step_length"
+        android:title="@string/pref_title_step_length"
+        android:defaultValue="@string/pref_default_step_length"
+        android:inputType="number"
+        />
+
+    <EditTextPreference
+        android:key="body_weight"
+        android:title="@string/pref_title_body_weight"
+        android:defaultValue="@string/pref_default_body_weight"
+        android:inputType="number"
+        />
+
+    <ListPreference
+        android:key="is_metric"
+        android:title="@string/pref_title_unit"
+        android:entries="@array/pref_unit_options"
+        android:entryValues="@array/pref_unit_options"
+        android:dialogTitle="@string/pref_dialog_title_unit"
+        android:defaultValue="@string/pref_default_unit" />
+
+    <EditTextPreference
+        android:key="history_waypoint_limit"
+        android:title="@string/pref_title_history_waypoint_limit"
+        android:defaultValue="@string/pref_default_history_waypoint_limit"
+        android:inputType="numberDecimal"
+        />
+
+</PreferenceScreen>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_navigation">
+        <item
+            android:id="@+id/navItem1"
+            android:title="Trace"
+            android:icon="@android:drawable/ic_menu_recent_history"/>
+        <item
+            android:id="@+id/navItem2"
+            android:title="Share"
+            android:icon="@android:drawable/ic_menu_share"/>
+
+        <item
+            android:id="@+id/navItem3"
+            android:title="Setting"
+            android:icon="@android:drawable/ic_menu_set_as"/>
+        <item
+            android:id="@+id/navItem4"
+            android:title="Feedback"
+            android:icon="@android:drawable/ic_menu_send"/>
+    </group>
+
+</menu>

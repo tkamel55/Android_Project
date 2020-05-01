@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Android_Project</string>
+
+    <string name="notification_subtitle">Counting your steps</string>
+
+    <string name="started">Pedometer started.</string>
+    <string name="stopped">Pedometer stopped.</string>
+    <string name="map_key">AIzaSyB06ApocOaq0pzSHFIbP6Ub5aeE7zOSrsI</string>
+
+    <string name="openDrawerContentDescRes">openDrawerContentDescRes</string>
+    <string name="closeDrawerContentDescRes">closeDrawerContentDescRes</string>
+
+    <!-- Main Activity -->
+    <string name="steps_today">Steps Today</string>
+    <string name="calories_burned">Calories</string>
+    <string name="distance">Distance</string>
+    <string name="speed_title">Speed</string>
+    <string name="pace_title">Pace</string>
+    <string name="history_trace">Trace</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="calories_unit">cal</string>
+    <string name="distance_unit_metric">km</string>
+    <string name="distance_unit_imperial">miles</string>
+    <string name="speed_unit_metric">km / h</string>
+    <string name="speed_unit_imperial">miles / h</string>
+    <string name="pace_unit">steps / min</string>
+    <string name="email_required_text">Please provide a valid email address</string>
+    <string name="permisson_text">Permission needed...</string>
+    <string name="permisson_rejected">If you reject permission,you can not use this service  Please turn on permissions at [Setting] > [Permission]</string>
+</resources>

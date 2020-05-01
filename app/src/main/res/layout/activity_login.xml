@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            >
+
+
+            <ImageView
+                android:id="@+id/ivLogLogo"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="50dp"
+                android:layout_marginTop="18dp"
+                android:src="@drawable/heart" />
+
+
+            <ImageView
+                android:id="@+id/ivSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginBottom="15dp"
+                android:contentDescription="Sign in text on registration activity"
+                android:src="@drawable/sign_in" />
+
+
+            <EditText
+                android:id="@+id/etCreEmail"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableLeft="@drawable/ic_mail_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_mail_black_24dp"
+                android:hint="Email"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+
+            <AutoCompleteTextView
+                android:id="@+id/etCrePass"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_rect"
+                android:drawableLeft="@drawable/ic_lock_black_24dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_lock_black_24dp"
+                android:hint="Password"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:text="Forgot Password? "
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btnsignin_gradient"
+                android:text="Sign in"
+                android:textColor="#FFFFFF" />
+
+
+            <TextView
+                android:id="@+id/goSignup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Don't have an account? "
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</RelativeLayout>
