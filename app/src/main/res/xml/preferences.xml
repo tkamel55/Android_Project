@@ -26,19 +26,4 @@
         android:inputType="number"
         />
 
-    <ListPreference
-        android:key="is_metric"
-        android:title="@string/pref_title_unit"
-        android:entries="@array/pref_unit_options"
-        android:entryValues="@array/pref_unit_options"
-        android:dialogTitle="@string/pref_dialog_title_unit"
-        android:defaultValue="@string/pref_default_unit" />
-
-    <EditTextPreference
-        android:key="history_waypoint_limit"
-        android:title="@string/pref_title_history_waypoint_limit"
-        android:defaultValue="@string/pref_default_history_waypoint_limit"
-        android:inputType="numberDecimal"
-        />
-
 </PreferenceScreen>
